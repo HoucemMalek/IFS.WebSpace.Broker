@@ -1,0 +1,49 @@
+.content {
+  line-height: 0.5;
+
+  h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.content-block {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 10px;
+
+  .screen-x-small & {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.responsive-paddings {
+  padding: 10px;
+
+  .screen-large & {
+    padding: 20px;
+  }
+}
+
+.dx-card.wide-card {
+  border-radius: 1;
+  margin-left: 20;
+  margin-right: 50;
+  border-right: 1;
+  border-left: 1;
+}
+
+.full-height-scrollable > .dx-scrollable-wrapper >
+.dx-scrollable-container > .dx-scrollable-content {
+  height: 100%;
+
+  & > .dx-scrollview-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+}
+
+$side-panel-min-width: 60px;

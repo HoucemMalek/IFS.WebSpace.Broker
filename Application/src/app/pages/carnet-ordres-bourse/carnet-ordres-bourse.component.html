@@ -1,0 +1,107 @@
+<h2 class="content-block"><b>Carnet d'ordres en bourse</b></h2>
+
+<dx-data-grid class="dx-card wide-card"
+    [dataSource]="dataSource"
+    [showBorders]="false"
+    [focusedRowEnabled]="true"
+    [focusedRowIndex]="0"
+    [columnAutoWidth]="true"
+    [columnHidingEnabled]="true">
+
+    <dxo-paging [pageSize]="6"></dxo-paging>
+    <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+
+    <dxi-column
+        dataField="Task_ID"
+        caption=""
+        [width]="40"
+        [hidingPriority]="4">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Subject"
+        [width]="190"
+        caption="Date document"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Status"
+        [width]="100"
+        caption="Classe"
+        [hidingPriority]="4">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Priority"
+        [width]="100"
+        caption="N°"
+        [hidingPriority]="1">
+        <dxo-lookup
+            [dataSource]="priority"
+            valueExpr="value"
+            displayExpr="name">
+        </dxo-lookup>
+    </dxi-column>
+    <dxi-column
+        dataField="ResponsibleEmployee.Employee_Full_Name"
+        caption="Compte"
+        [allowSorting]="false"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Start_Date"
+        caption="Sens"
+        dataType="date"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Due_Date"
+        caption="Titre"
+        dataType="date"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Priority"
+        caption="Quantité"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Completion"
+        caption="Type ordre"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Completion"
+        caption="Prix"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Completion"
+        caption="Statut"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Completion"
+        caption="Etat"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Completion"
+        caption="Date expiration"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Completion"
+        caption="Qté Exe"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Completion"
+        caption="N° origine"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Completion"
+        caption=""
+        [hidingPriority]="1">
+    </dxi-column>
+</dx-data-grid>
