@@ -1,6 +1,6 @@
 <h2 class="content-block"><b>Carnet d'ordres en bourse</b></h2>
 
-<dx-data-grid class="dx-card wide-card"
+<div id="corps"><dx-data-grid class="dx-card wide-card"
     [dataSource]="dataSource"
     [showBorders]="false"
     [focusedRowEnabled]="true"
@@ -8,9 +8,28 @@
     [columnAutoWidth]="true"
     [columnHidingEnabled]="true">
 
-    <dxo-paging [pageSize]="6"></dxo-paging>
-    <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+     <!-- <dxo-paging [pageSize]="0"></dxo-paging>  -->
+     <!-- <dxo-paging [enabled]="false"></dxo-paging> -->
+     <!-- <dxo-paging 
+        [pageSize]="15"
+        [pageIndex]="0"> </dxo-paging>-->
+    <!-- <dxo-pager [showPageSizeSelector]="true"
+    [showNavigationButtons]="true" ></dxo-pager>  -->
+    <!-- <dxo-paging 
+        [enabled]="true">
+    </dxo-paging>
+    <dxo-pager
+        [showInfo]="true"
+        infoText="Page #{0}. Total: {1} ({2} items)">
+    </dxo-pager> -->
+    <!-- <dxo-scrolling
+        mode = "standard" > 
+    </dxo-scrolling> -->
+    <dxo-scrolling
+        [useNative]="true">
+    </dxo-scrolling>
     <dxo-filter-row [visible]="true"></dxo-filter-row>
+    
 
     <dxi-column
         dataField="Task_ID"
@@ -104,4 +123,4 @@
         caption=""
         [hidingPriority]="1">
     </dxi-column>
-</dx-data-grid>
+</dx-data-grid></div>

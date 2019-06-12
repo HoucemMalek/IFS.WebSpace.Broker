@@ -45,7 +45,7 @@ export const navigation = [
     path: '/page/marche-primaire',
     icon: 'doc'
   },
-  /*{
+  {
     text: 'Examples',
     icon: 'folder',
     items: [
@@ -58,5 +58,5 @@ export const navigation = [
         path: '/display-data'
       }
     ]
-  }*/
+  }
 ];
