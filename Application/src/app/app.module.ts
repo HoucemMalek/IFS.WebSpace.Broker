@@ -6,12 +6,15 @@ import { SideNavOuterToolbarModule, SideNavInnerToolbarModule, SingleCardModule 
 import { FooterModule, LoginFormModule } from './shared/components';
 import { AuthService, ScreenService, AppInfoService } from './shared/services';
 import { AppRoutingModule } from './app-routing.module';
+import { SessionStore } from './pages/market/session/session.store';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+
     
     
     
@@ -25,10 +28,10 @@ import { AppRoutingModule } from './app-routing.module';
     FooterModule,
     LoginFormModule,
     AppRoutingModule,
-   
+  
     
   ],
-  providers: [AuthService, ScreenService, AppInfoService],
+  providers: [AuthService, ScreenService, AppInfoService, SessionStore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

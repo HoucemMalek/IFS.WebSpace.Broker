@@ -7,7 +7,7 @@ export const navigation = [
     items: [
       {
         text: 'Marché',
-        path: '/marche-ligne/marche'
+        path: 'marche-ligne/marche'
       }/*,
       {
         text: 'Favoris',

@@ -11,6 +11,8 @@ import { PortfolioComponent } from './pages/account/portfolio/portfolio.componen
 import { OrderHistoryComponent } from './pages/trading/order-history/order-history.component';
 import { TransactionHistoryComponent } from './pages/account/transaction-history/transaction-history.component';
 import { SessionComponent } from './pages/market/session/session.component';
+import { OrderComponent } from './pages/trading/order/order.component';
+import { InstrumentSummaryComponent } from './pages/market/instrument-summary/instrument-summary.component';
 
 
 
@@ -70,6 +72,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes), DxDataGridModule, DxFormModule, DxButtonModule],
   providers: [AuthGuardService],
   exports: [RouterModule],
-  declarations: [HomeComponent, ProfileComponent, OrderBookComponent,PortfolioComponent, OrderHistoryComponent, TransactionHistoryComponent, SessionComponent]
+  declarations: [HomeComponent, OrderComponent, ProfileComponent, OrderBookComponent,PortfolioComponent, OrderHistoryComponent, TransactionHistoryComponent, SessionComponent,InstrumentSummaryComponent]
 })
 export class AppRoutingModule { }
