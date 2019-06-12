@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
-  selector: 'app-historique-ordres-bourse',
-  templateUrl: './historique-ordres-bourse.component.html',
-  styleUrls: ['./historique-ordres-bourse.component.scss']
+  selector: 'app-order',
+  templateUrl: './order.component.html',
+  styleUrls: ['./order.component.scss']
 })
-export class HistoriqueOrdresBourseComponent{
+export class OrderComponent{
 
   dataSource: any;
   priority: any[];
@@ -30,11 +30,11 @@ export class HistoriqueOrdresBourseComponent{
       ]
     };
     this.priority = [
-      { name: 'High', value: 4 },
-      { name: 'Urgent', value: 3 },
-      { name: 'Normal', value: 2 },
+      { name: 'High', value: 1 },
+      { name: 'Urgent', value: 1 },
+      { name: 'Normal', value: 1 },
       { name: 'Low', value: 1 }
     ];
   }
-  
+
 }

@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
-import 'devextreme/data/odata/store';
+import { Component} from '@angular/core';
 
 @Component({
-  templateUrl: 'display-data.component.html'
+  selector: 'app-instrument-summary',
+  templateUrl: './instrument-summary.component.html',
+  styleUrls: ['./instrument-summary.component.scss']
 })
+export class InstrumentSummaryComponent{
 
-export class DisplayDataComponent {
   dataSource: any;
   priority: any[];
 
@@ -29,10 +30,11 @@ export class DisplayDataComponent {
       ]
     };
     this.priority = [
-      { name: 'High', value: 4 },
-      { name: 'Urgent', value: 3 },
-      { name: 'Normal', value: 2 },
+      { name: 'High', value: 1 },
+      { name: 'Urgent', value: 1 },
+      { name: 'Normal', value: 1 },
       { name: 'Low', value: 1 }
     ];
   }
+
 }

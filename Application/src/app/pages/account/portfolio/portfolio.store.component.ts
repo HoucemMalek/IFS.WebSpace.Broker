@@ -1,12 +1,11 @@
-import { Component} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-marche',
-  templateUrl: './marche.component.html',
-  styleUrls: ['./marche.component.scss']
+  selector: 'app-portfolio',
+  templateUrl: './portfolio.component.html',
+  styleUrls: ['./portfolio.component.scss']
 })
-export class MarcheComponent{
-
+export class PortfolioStoreComponent {
   dataSource: any;
   priority: any[];
 
@@ -30,11 +29,11 @@ export class MarcheComponent{
       ]
     };
     this.priority = [
-      { name: 'High', value: 1 },
-      { name: 'Urgent', value: 1 },
-      { name: 'Normal', value: 1 },
+      { name: 'High', value: 4 },
+      { name: 'Urgent', value: 3 },
+      { name: 'Normal', value: 2 },
       { name: 'Low', value: 1 }
     ];
   }
-
+  
 }

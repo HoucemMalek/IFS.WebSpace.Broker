@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-releve-compte',
-  templateUrl: './releve-compte.component.html',
-  styleUrls: ['./releve-compte.component.scss']
+  selector: 'app-transaction-history',
+  templateUrl: './transaction-history.component.html',
+  styleUrls: ['./transaction-history.component.scss']
 })
-export class ReleveCompteComponent{
+export class TransactionHistoryComponent{
 
   dataSource: any;
   priority: any[];

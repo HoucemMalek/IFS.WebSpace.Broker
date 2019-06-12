@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-marche-primaire',
-  templateUrl: './marche-primaire.component.html',
-  styleUrls: ['./marche-primaire.component.scss']
+  selector: 'app-order-history',
+  templateUrl: './order-history.component.html',
+  styleUrls: ['./order-history.component.scss']
 })
-export class MarchePrimaireComponent{
+export class OrderHistoryComponent{
+
   dataSource: any;
   priority: any[];
 

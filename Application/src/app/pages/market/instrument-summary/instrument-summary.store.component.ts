@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
-  selector: 'app-portefeuille',
-  templateUrl: './portefeuille.component.html',
-  styleUrls: ['./portefeuille.component.scss']
+  selector: 'app-instrument-summary',
+  templateUrl: './instrument-summary.component.html',
+  styleUrls: ['./instrument-summary.component.scss']
 })
-export class PortefeuilleComponent {
+export class InstrumentSummaryStoreComponent{
+
   dataSource: any;
   priority: any[];
 
@@ -29,11 +30,11 @@ export class PortefeuilleComponent {
       ]
     };
     this.priority = [
-      { name: 'High', value: 4 },
-      { name: 'Urgent', value: 3 },
-      { name: 'Normal', value: 2 },
+      { name: 'High', value: 1 },
+      { name: 'Urgent', value: 1 },
+      { name: 'Normal', value: 1 },
       { name: 'Low', value: 1 }
     ];
   }
-  
+
 }

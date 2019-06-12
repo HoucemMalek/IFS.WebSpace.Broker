@@ -8,11 +8,11 @@ export const navigation = [
       {
         text: 'Marché',
         path: '/marche-ligne/marche'
-      },
+      }/*,
       {
         text: 'Favoris',
         path: '/marche-ligne/favoris'
-      }
+      }*/
     ]
   },
   /*{
@@ -39,12 +39,7 @@ export const navigation = [
     text: 'Relevé de compte espèces',
     path: '/page/releve-compte',
     icon: 'box'
-  },
-  {
-    text: 'Marché primaire',
-    path: '/page/marche-primaire',
-    icon: 'doc'
-  },
+  }/*,
   {
     text: 'Examples',
     icon: 'folder',
@@ -58,5 +53,5 @@ export const navigation = [
         path: '/display-data'
       }
     ]
-  }
+  }*/
 ];

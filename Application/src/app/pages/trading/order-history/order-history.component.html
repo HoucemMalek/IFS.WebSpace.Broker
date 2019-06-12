@@ -1,4 +1,4 @@
-<h2 class="content-block"><b>Marché Primaire</b></h2>
+<h2 class="content-block"><b>Historique Ordres en Bourse</b></h2>
 
 <dx-data-grid class="dx-card wide-card"
     [dataSource]="dataSource"
@@ -16,23 +16,25 @@
         dataField="Task_ID"
         caption=""
         [width]="40"
-        [hidingPriority]="0">
+        [hidingPriority]="1">
     </dxi-column>
     <dxi-column
         dataField="Task_Subject"
         [width]="190"
         caption="Date document"
-        [hidingPriority]="0">
+        [hidingPriority]="1">
     </dxi-column>
     <dxi-column
         dataField="Task_Status"
-        caption="N°"
-        [hidingPriority]="0">
+        [width]="100"
+        caption="Classe"
+        [hidingPriority]="1">
     </dxi-column>
     <dxi-column
         dataField="Task_Priority"
-        caption="Compte"
-        [hidingPriority]="0">
+        [width]="100"
+        caption="N°"
+        [hidingPriority]="1">
         <dxo-lookup
             [dataSource]="priority"
             valueExpr="value"
@@ -41,30 +43,55 @@
     </dxi-column>
     <dxi-column
         dataField="ResponsibleEmployee.Employee_Full_Name"
-        caption="Libellé"
+        caption="Compte"
         [allowSorting]="false"
-        [hidingPriority]="0">
+        [hidingPriority]="1">
     </dxi-column>
     <dxi-column
         dataField="Task_Start_Date"
-        caption="Quantité"
+        caption="Sens"
         dataType="date"
-        [hidingPriority]="0">
+        [hidingPriority]="1">
     </dxi-column>
     <dxi-column
         dataField="Task_Due_Date"
-        caption="Prix net"
+        caption="Titre"
         dataType="date"
-        [hidingPriority]="0">
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Priority"
+        caption="Quantité"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Completion"
+        caption="Type ordre"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Completion"
+        caption="Prix"
+        [hidingPriority]="1">
     </dxi-column>
     <dxi-column
         dataField="Task_Completion"
         caption="Statut"
-        [hidingPriority]="0">
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Completion"
+        caption="Etat"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Completion"
+        caption="Date expiration"
+        [hidingPriority]="1">
     </dxi-column>
     <dxi-column
         dataField="Task_Completion"
         caption=""
-        [hidingPriority]="0">
+        [hidingPriority]="1">
     </dxi-column>
 </dx-data-grid>

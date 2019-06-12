@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-favoris',
-  templateUrl: './favoris.component.html',
-  styleUrls: ['./favoris.component.scss']
+  selector: 'app-transaction-history',
+  templateUrl: './transaction-history.component.html',
+  styleUrls: ['./transaction-history.component.scss']
 })
-export class FavorisComponent {
- 
+export class TransactionHistoryStoreComponent{
+
   dataSource: any;
   priority: any[];
 
@@ -38,6 +38,3 @@ export class FavorisComponent {
   }
   
 }
-
-
-
