@@ -5,14 +5,16 @@ import { AuthGuardService } from './shared/services';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 
-import { DxDataGridModule, DxFormModule ,DxButtonModule } from 'devextreme-angular';
-import { OrderBookComponent } from './pages/trading/order-book/order-book.component';
-import { PortfolioComponent } from './pages/account/portfolio/portfolio.component';
-import { OrderHistoryComponent } from './pages/trading/order-history/order-history.component';
-import { TransactionHistoryComponent } from './pages/account/transaction-history/transaction-history.component';
-import { SessionComponent } from './pages/market/session/session.component';
-import { OrderComponent } from './pages/trading/order/order.component';
-import { InstrumentSummaryComponent } from './pages/market/instrument-summary/instrument-summary.component';
+import { DxDataGridModule, DxFormModule ,DxButtonModule ,DxToolbarModule, DxHtmlEditorModule, DxPopupModule, DxBoxModule } from 'devextreme-angular';
+import { OrderBookComponent } from './pages/trading/order-book/order-book';
+
+import { OrderHistoryComponent } from './pages/trading/order-history/order-history';
+import { TransactionHistoryComponent } from './pages/account/transaction-history/transaction-history';
+import { SessionComponent } from './pages/market/session/session';
+import { OrderComponent } from './pages/trading/order/order';
+import { InstrumentSummaryComponent } from './pages/market/instrument-summary/instrument-summary';
+import { PortfolioComponent } from './pages/account/portfolio/portfolio';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -69,7 +71,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), DxDataGridModule, DxFormModule, DxButtonModule],
+  imports: [RouterModule.forRoot(routes), DxDataGridModule, DxFormModule, DxButtonModule,CommonModule,DxPopupModule,DxToolbarModule, DxHtmlEditorModule,DxBoxModule],
   providers: [AuthGuardService],
   exports: [RouterModule],
   declarations: [HomeComponent, OrderComponent, ProfileComponent, OrderBookComponent,PortfolioComponent, OrderHistoryComponent, TransactionHistoryComponent, SessionComponent,InstrumentSummaryComponent]

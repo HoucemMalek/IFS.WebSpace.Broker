@@ -1,0 +1,93 @@
+<h2 class="content-block"><b>Relevé de Compte Espèces</b></h2>
+<dx-data-grid class="dx-card wide-card"
+    [dataSource]="dataSource"
+    [showBorders]="true"
+    [focusedRowEnabled]="true"
+    [focusedRowIndex]="0"
+    [columnAutoWidth]="false"
+    [columnHidingEnabled]="true"
+    >
+
+    <dxo-paging [pageSize]="6"></dxo-paging>
+    <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+
+    <dxi-column
+        dataField="Task_ID"
+        caption=""
+        [width]="40"
+        [hidingPriority]="1"
+        >
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Subject"
+        [width]="190"
+        caption="Type mvt"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Status"
+        [width]="100"
+        caption="Date"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Priority"
+        [width]="100"
+        caption="N° document"
+        [hidingPriority]="1">
+        <dxo-lookup
+            [dataSource]="priority"
+            valueExpr="value"
+            displayExpr="name">
+        </dxo-lookup>
+    </dxi-column>
+    <dxi-column
+        dataField="ResponsibleEmployee.Employee_Full_Name"
+        caption="Libellé"
+        [allowSorting]="false"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Start_Date"
+        caption="Brut"
+        dataType="date"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Due_Date"
+        caption="Frais"
+        dataType="date"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Priority"
+        caption="Taxes"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Completion"
+        caption="Débit"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Completion"
+        caption="Crédit"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Completion"
+        caption="Solde ant."
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Completion"
+        caption="Solde Espèces"
+        [hidingPriority]="1">
+    </dxi-column>
+    <dxi-column
+        dataField="Task_Completion"
+        caption=""
+        [hidingPriority]="1">
+    </dxi-column>
+</dx-data-grid>

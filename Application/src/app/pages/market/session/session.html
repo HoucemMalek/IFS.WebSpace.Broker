@@ -1,0 +1,382 @@
+
+<dx-toolbar>
+        <dxi-item location="before"><b style="padding-left: 10px;">Marché en ligne</b>
+        </dxi-item>
+</dx-toolbar>
+<dx-box
+direction="row"
+width="100%"
+[height]="60">
+<dxi-item
+    class=""
+    [ratio]="1">
+   <p><b>MPBS</b> - 14:05:50<br> 100 (5,50 0,54%)</p> 
+</dxi-item>
+<dxi-item
+    class=""
+    [ratio]="1">
+   <p>MPBS - 14:05:50<br> 100 (5,50 0,54%)</p> 
+</dxi-item>
+<dxi-item
+    class=""
+    [ratio]="1">
+   <p>MPBS - 14:05:50<br> 100 (5,50 0,54%)</p> 
+</dxi-item>
+<dxi-item
+    class=""
+    [ratio]="1">
+   <p>MPBS - 14:05:50<br> 100 (5,50 0,54%)</p> 
+</dxi-item>
+<dxi-item
+    class=""
+    [ratio]="1">
+   <p> MPBS - 14:05:50<br> 100 (5,50 0,54%)</p> 
+</dxi-item>
+<dxi-item
+    class=""
+    [ratio]="1">
+   <p>MPBS - 14:05:50<br> 100 (5,50 0,54%)</p> 
+</dxi-item>
+<dxi-item
+    class=""
+    [ratio]="1">
+   <p>MPBS - 14:05:50<br> 100 (5,50 0,54%)</p> 
+</dxi-item>
+</dx-box>
+
+<dx-box style="background-color: white" direction="row" width="100%" [height]="45">
+    <dxi-item class=""  [ratio]="1">
+            <b style="padding-left: 10px;">Séance du:</b> <span>14/06/2019 (Fermée)</span>
+    </dxi-item>
+    <dxi-item class=""  [ratio]="1">
+            <b style="padding-left: 10px;">Volume :</b> <span>5.674.344,25</span>
+    </dxi-item>
+    <dxi-item class=""  [ratio]="1">
+            <b style="padding-left: 10px;">Transactions:</b> <span>5.674.344,25</span>
+    </dxi-item>
+    <dxi-item class=""  [ratio]="1">
+            <b style="padding-left: 10px;"> TUNINDEX:</b> <span>7.076,61  -0,18%</span>
+    </dxi-item>
+    <dxi-item class=""  [ratio]="1">
+            <b style="padding-left: 10px;">TUNINDEX20:</b> <span>7.076,61  -0,18%</span>
+    </dxi-item>
+</dx-box>
+<!-- <dx-toolbar [items]="store.items">
+
+    </dx-toolbar> -->
+<!-- <dx-html-editor>
+<dxo-toolbar>
+<dxi-item location="">Séance du: {{store.data.isinCode}}</dxi-item>
+<dxi-item>Volume: {{store.data.Nom}}</dxi-item>
+<dxi-item>Transaction: {{store.data.Grp}}</dxi-item>
+<dxi-item>TUNINDEX: {{store.data.Dem}}</dxi-item>
+<dxi-item widget="dxButton" [options]="toolbarButtonOptions">TUNINDEX20: {{store.data.Var}}</dxi-item>
+</dxo-toolbar>
+</dx-html-editor>
+<dx-popup [showTitle]="true" title="Markup" [(visible)]="popupVisible">
+        <ul>
+                <li>Inline formats:
+                    <ul>
+                        <li><strong>Bold</strong>, <em>italic</em>, <s>underlined</s> text formatting</li>
+                        <li>Font, size, color changes (HTML only)</li>
+                    </ul>
+                </li>
+                <li>Block formats:
+                    <ul>
+                        <li>Headers</li>
+                        <li>Text alignment</li>
+                        <li>Lists (ordered and unordered)</li>
+                        <li>Code blocks</li>
+                        <li>Quotes</li>
+                    </ul>
+                </li>
+                <li>Custom formats</li>
+                <li>HTML and Markdown support</li>
+                <li>Mail-merge placeholders (for example, %username%)</li>
+                <li>Adaptive toolbar for working images, links, and color formats</li>
+                <li>Insert images as a link or base64 (drag-and-drop images to convert them to base64)</li>
+                <li>Copy-paste rich content (unsupported formats are removed)</li>
+            </ul>
+    </dx-popup> -->
+
+    <dx-box
+    direction="row"
+    width="100%"
+    [height]="75">
+    <dxi-item
+        class="rect demo-dark"
+        [ratio]="1">
+        ratio = 1
+    </dxi-item>
+    <dxi-item
+        class="rect demo-light"
+        [ratio]="2">
+        ratio = 2
+    </dxi-item>
+    <dxi-item
+        class="rect demo-dark"
+        [ratio]="1">
+        ratio = 1
+    </dxi-item>
+</dx-box>
+
+    <!-- <div class="stats">
+            <div>
+                <div class="sub-title">Area, km<sup>2</sup></div>
+                <div class="stat-value">{{store.data.Nom}}</div>
+            </div>
+            <div>
+                <div class="sub-title">Population</div>
+                <div class="stat-value">{{store.data.Grp}}</div>
+            </div>
+            <div>
+                <div class="sub-title">GDP, billion</div>
+                <div class="stat-value">{{"$" + store.data.Var}}</div>
+            </div>
+        </div>
+
+<div class="container" >
+        <div class="left" >Séance du: {{store.data.isinCode}}</div>
+        <div class="left" >Volume: {{store.data.Nom}}</div>
+        <div class="left" >Transaction: {{store.data.Grp}}</div>
+        <div class="left" >TUNINDEX: {{store.data.Dem}}</div>
+        <div class="left" >TUNINDEX20: {{store.data.Var}}</div>
+
+</div> -->
+<h2><b>Marché</b></h2>
+
+<div class="container">
+        <div class="left" *ngFor="let pd of store.sessionDataTransaction">Der: {{pd.Nom}}</div>
+
+</div>
+
+
+<dx-data-grid class="dx-card wide-card"
+[dataSource]="store.sessionData"
+keyExpr="isinCode"
+[showBorders]="true"
+[focusedRowEnabled]="true" 
+[focusedRowIndex]="0"
+[columnAutoWidth]="true"
+[columnHidingEnabled]="true"
+(onSelectionChanged)="selectionChanged($event)"
+(onContentReady)="contentReady($event)"
+[masterDetail]="{ enabled: false, template: 'detail' }"
+
+>
+
+<dxo-selection mode="single"></dxo-selection>
+
+<!-- <dxo-paging [pageSize]="11"></dxo-paging> 
+<dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+<dxo-filter-row [visible]="true"></dxo-filter-row> -->
+<dxo-scrolling
+        [useNative]="true">
+    </dxo-scrolling>
+
+     <dxi-column
+        dataField="isinCode"
+        [width]="40"
+        caption=""
+        [hidingPriority]="0"
+        >
+    </dxi-column>
+    <dxi-column
+        dataField="Nom"
+        [width]="100"
+        caption="Nom"
+        [hidingPriority]="0"
+        >
+    </dxi-column>
+    <dxi-column
+        dataField="Grp"
+        caption="Grp"
+        [width]="60"
+        [hidingPriority]="0"
+       >
+    </dxi-column>
+    <dxi-column
+        dataField="Dem."
+        caption="Dem."
+        [width]="60"
+        [hidingPriority]="0"
+        >
+        <dxo-lookup
+            [dataSource]="priority"
+            valueExpr="value"
+            
+            displayExpr="name">
+        </dxo-lookup>
+    </dxi-column>
+   
+    <dxi-column
+        dataField="NbrA"
+        caption="NbrA"
+        [width]="80"
+        dataType="date"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="QtéA"
+        caption="QtéA"
+        [width]="80"
+        dataType="date"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="Achat"
+        caption="Achat"
+        [width]="60"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="Vente"
+        caption="Vente"
+        [width]="60"
+        [hidingPriority]="0">
+    </dxi-column> 
+     <dxi-column
+        dataField="QtéV"
+        caption="QtéV"
+        [width]="60"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="NbrV"
+        caption="NbrV"
+        [width]="60"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="QTO"
+        caption="QTO"
+        [width]="60"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="CTO"
+        caption="CTO"
+        [width]="60"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="VTO"
+        caption="VTO"
+        [width]="60"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="Ouv."
+        caption="Ouv."
+        [width]="60"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="Statut"
+        caption="Statut"
+        [width]="80"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="Clot."
+        caption="Clôt."
+        [width]="60"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="Heure"
+        caption="Heure"
+        [width]="70"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="QtéE"
+        caption="QtéE"
+        [width]="60"
+        [hidingPriority]="0">
+    </dxi-column>
+    
+    <dxi-column
+        dataField="QtéT"
+        caption="QtéT"
+        [width]="60"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="Cap"
+        caption="Cap"
+        [width]="60"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="SeuilH"
+        caption="SeuilH"
+        [width]="70"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="+Haut"
+        caption="+Haut"
+        [width]="70"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="+Bas"
+        caption="+Bas"
+        [width]="60"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="SeuilB"
+        caption="SeuilB"
+        [width]="70"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="CMP"
+        caption="CMP"
+        [width]="70"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="CMP"
+        caption=""
+        [width]="70"
+        [hidingPriority]="1">
+    </dxi-column> 
+    <div *dxTemplate="let item of 'detail'">
+        <table>
+        <tr>
+           <td><p>Der: {{item.data.Nom}}</p></td> 
+           <td><p>Var%: {{item.data.Nom}}</p></td> 
+        </tr>
+        <tr>
+                <td><p>Ouv: {{item.data.Nom}}</p></td> 
+                <td><p>Clôt: {{item.data.Nom}}</p></td>
+        </tr>
+        <tr>
+                <td><p>+Haut: {{item.data.Nom}}</p></td> 
+                <td><p>+Bas: {{item.data.Nom}}</p></td>
+        </tr>
+        <tr>
+                <td><p>SeuilH: {{item.data.Nom}}</p></td> 
+                <td><p>SeuilB: {{item.data.Nom}}</p></td>
+        </tr>
+        <tr>
+                <td><p>QtéT: {{item.data.Nom}}</p></td> 
+                <td><p>Cap.Ech: {{item.data.Nom}}</p></td>
+        </tr>
+        <tr>
+                <td><p>CTO: {{item.data.Nom}}</p></td> 
+                <td><p>VTO: {{item.data.Nom}}</p></td>
+        </tr>
+        <tr>
+                <td><p>QTO: {{item.data.Nom}}</p></td> 
+                <td><p>Vol.TO: {{item.data.Nom}}</p></td>
+        </tr>
+
+
+    </table>
+    </div>
+</dx-data-grid> 
+

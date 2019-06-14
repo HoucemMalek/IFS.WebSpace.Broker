@@ -1,26 +1,31 @@
 export const navigation = [
 
 
-  {
-    text: 'Marché en Ligne',
-    icon: 'home',
-    items: [
-      {
-        text: 'Marché',
-        path: 'marche-ligne/marche'
-      }/*,
-      {
-        text: 'Favoris',
-        path: '/marche-ligne/favoris'
-      }*/
-    ]
-  },
+  // {
+  //   text: 'Marché en Ligne',
+  //   icon: 'home',
+  //   items: [
+  //     {
+  //       text: 'Marché',
+  //       path: 'marche-ligne/marche'
+  //     },
+  //     {
+  //       text: 'Favoris',
+  //       path: '/marche-ligne/favoris'
+  //     }
+  //   ]
+  // },
   /*{
     text: 'Marché en Ligne',
     path: '/home',
     icon: 'home'
   },*/
   {
+    text: 'Marché',
+    path: 'marche-ligne/marche',
+    icon: 'home'
+  }
+  ,{
     text: 'Carnet d\'ordres en bourse',
     path: '/page/carnet-ordres-bourse',
     icon: 'menu'
