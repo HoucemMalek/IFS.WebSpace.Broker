@@ -1,6 +1,7 @@
 
 .grid {
-    height: 400px;
+   // height: 400px;
+    margin-left: 0px;
 }
 .main {
    
@@ -37,4 +38,16 @@
    // box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1);
     padding: 10px;
     box-sizing: border-box;
+}
+
+
+::ng-deep .instrumentDetail {
+    height: 200px;
+    // float: left;
+    // padding: 20px 20px 20px 0;
+}
+::ng-deep .employeeInfo .employeePhoto{
+    height: 300px;
+    float: left;
+    padding: 20px 20px 20px 0;
 }

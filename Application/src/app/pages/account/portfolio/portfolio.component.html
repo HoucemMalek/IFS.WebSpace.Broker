@@ -1,68 +1,73 @@
-<h2 class="content-block"><b>Portefeuille</b></h2>
+
+<!-- <h2 class="content-block"><b>Portefeuille</b></h2> -->
 <section class="main">
         
-        <section class="left-side">
+     <section class="left-side">
     <dx-data-grid class="dx-card wide-card grid"
         [dataSource]="dataSource"
+        keyExpr = "ID"
         [showBorders]="false"
         [focusedRowEnabled]="true"
-        [focusedRowIndex]="0"
+        [focusedRowIndex]=""
         [columnAutoWidth]="true"
         [columnHidingEnabled]="true"
+        [masterDetail]="{ enabled: false, template: 'detail' }"
+        (onSelectionChanged)="selectionChanged($event)"
+       
     >
-
-    <!-- <dxo-paging [pageSize]="6"></dxo-paging> -->
+    <dxo-selection mode="single"></dxo-selection>
+    <dxo-paging [pageSize]=""></dxo-paging> 
     <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
-    <dxo-filter-row [visible]="true"></dxo-filter-row>
+    <dxo-filter-row [visible]="true"></dxo-filter-row> 
 
     <dxi-column
-        dataField="Task_ID"
+        dataField="ID"
         [width]="40"
         caption=""
         [hidingPriority]="0">
     </dxi-column>
     <dxi-column
-        dataField="Task_Subject"
-        [width]="190"
+        dataField="Prefix"
+        [width]="40"
         caption="Titre"
         [hidingPriority]="0">
     </dxi-column>
     <dxi-column
-        dataField="Task_Status"
+        dataField="FirstName"
         [width]="100"
         caption="Stock"
         [hidingPriority]="0">
     </dxi-column>
     <dxi-column
-        dataField="Task_Priority"
+        dataField="LastName"
         [width]="100"
         caption="Réservé"
         [hidingPriority]="0">
-        <dxo-lookup
+        <!-- <dxo-lookup
             [dataSource]="priority"
             valueExpr="value"
             displayExpr="name">
-        </dxo-lookup>
+        </dxo-lookup> -->
     </dxi-column>
     <dxi-column
-        dataField="ResponsibleEmployee.Employee_Full_Name"
+        dataField="Position"
         caption="CMP"
         [allowSorting]="false"
         [hidingPriority]="0">
     </dxi-column>
     <dxi-column
-        dataField="Task_Start_Date"
+        dataField="State"
         caption="Coût cumulé"
         dataType="date"
         [hidingPriority]="0">
     </dxi-column>
     <dxi-column
-        dataField="Task_Due_Date"
+        dataField="BirthDate"
         caption="Veille"
         dataType="date"
         [hidingPriority]="0">
     </dxi-column>
-    <dxi-column
+    <!-- <dxi-column
         dataField="Task_Priority"
         caption="Cours"
         [hidingPriority]="0">
@@ -92,10 +97,16 @@
         caption=""
         
         [hidingPriority]="0">
-    </dxi-column>
+    </dxi-column> -->
+    <div *dxTemplate="let item of 'detail'" class="instrumentDetail">
+        <div class="">
+            <p class="">{{item.data.Prefix}}</p>
+        </div>
+    </div>
 </dx-data-grid>
+ 
 </section>
 <section class="right-side" >
-        <app-home></app-home>
+        <app-home [childMessage]="message"></app-home>
 </section>  
 </section>   
