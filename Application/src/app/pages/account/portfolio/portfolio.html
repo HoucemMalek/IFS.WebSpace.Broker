@@ -1,45 +1,112 @@
-<h2 class="content-block"><b>Portefeuille</b></h2>
 
-<dx-data-grid class="dx-card wide-card"
-    [dataSource]="store.sessionData"
-    [showBorders]="false"
-    [focusedRowEnabled]="true"
-    [focusedRowIndex]="0"
-    [columnAutoWidth]="true"
-    [columnHidingEnabled]="true">
-
-    <dxo-paging [pageSize]="6"></dxo-paging>
-    <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
-    <dxo-filter-row [visible]="true"></dxo-filter-row>
-
-    <dxi-column
-    dataField="CompanyName"
-    [width]="40"
-    caption=""
-    [hidingPriority]="0">
-</dxi-column>
-<dxi-column
-    dataField="City"
-    [width]="100"
-    caption="Nom"
-    [hidingPriority]="0">
-</dxi-column>
-<dxi-column
-    dataField="State"
-    caption="Grp"
-    [width]="60"
-    [hidingPriority]="0">
-</dxi-column>
-<dxi-column
-    dataField="Phone"
-    caption="Dem."
-    [width]="60"
-    [hidingPriority]="0">
-    <dxo-lookup
-        [dataSource]="priority"
-        valueExpr="value"
+<!-- <h2 class="content-block"><b>Portefeuille</b></h2> -->
+<section class="main">
         
-        displayExpr="name">
-    </dxo-lookup>
-</dxi-column>
+    <section class="left-side">
+   <dx-data-grid class="dx-card wide-card grid"
+       [dataSource]="dataSource"
+       keyExpr = "ID"
+       [showBorders]="false"
+       [focusedRowEnabled]="true"
+       [focusedRowIndex]=""
+       [columnAutoWidth]="true"
+       [columnHidingEnabled]="true"
+       [masterDetail]="{ enabled: false, template: 'detail' }"
+       (onSelectionChanged)="selectionChanged($event)"
+      
+   >
+   <dxo-selection mode="single"></dxo-selection>
+   <dxo-paging [pageSize]=""></dxo-paging> 
+   <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+   <dxo-filter-row [visible]="true"></dxo-filter-row> 
+
+   <dxi-column
+       dataField="ID"
+       [width]="40"
+       caption=""
+       [hidingPriority]="0">
+   </dxi-column>
+   <dxi-column
+       dataField="Prefix"
+       [width]="40"
+       caption="Titre"
+       [hidingPriority]="0">
+   </dxi-column>
+   <dxi-column
+       dataField="FirstName"
+       [width]="100"
+       caption="Stock"
+       [hidingPriority]="0">
+   </dxi-column>
+   <dxi-column
+       dataField="LastName"
+       [width]="100"
+       caption="Réservé"
+       [hidingPriority]="0">
+       <!-- <dxo-lookup
+           [dataSource]="priority"
+           valueExpr="value"
+           displayExpr="name">
+       </dxo-lookup> -->
+   </dxi-column>
+   <dxi-column
+       dataField="Position"
+       caption="CMP"
+       [allowSorting]="false"
+       [hidingPriority]="0">
+   </dxi-column>
+   <dxi-column
+       dataField="State"
+       caption="Coût cumulé"
+       dataType="date"
+       [hidingPriority]="0">
+   </dxi-column>
+   <dxi-column
+       dataField="BirthDate"
+       caption="Veille"
+       dataType="date"
+       [hidingPriority]="0">
+   </dxi-column>
+   <!-- <dxi-column
+       dataField="Task_Priority"
+       caption="Cours"
+       [hidingPriority]="0">
+   </dxi-column>
+   <dxi-column
+       dataField="Task_Completion"
+       caption="Var%"
+       [hidingPriority]="0">
+   </dxi-column>
+   <dxi-column
+       dataField="Task_Completion"
+       caption="Valorisation"
+       [hidingPriority]="0">
+   </dxi-column>
+   <dxi-column
+       dataField="Task_Completion"
+       caption="+/- Value"
+       [hidingPriority]="0">
+   </dxi-column>
+   <dxi-column
+       dataField="Task_Completion"
+       caption="+/- Value (%)"
+       [hidingPriority]="0">
+   </dxi-column>
+   <dxi-column
+       dataField="Task_Completion"
+       caption=""
+       
+       [hidingPriority]="0">
+   </dxi-column> -->
+   <div *dxTemplate="let item of 'detail'" class="instrumentDetail">
+       <div class="">
+           <p class="">{{item.data.Prefix}}</p>
+       </div>
+   </div>
 </dx-data-grid>
+
+</section>
+<section class="right-side" >
+       <app-home [childMessage]="message"></app-home>
+</section>  
+</section>   
