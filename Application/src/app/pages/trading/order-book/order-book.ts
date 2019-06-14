@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-portfolio',
-  templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  selector: 'app-order-book',
+  templateUrl: './order-book.html',
+  styleUrls: ['./order-book.scss']
 })
-export class PortfolioComponent {
+export class OrderBookComponent{
+
   dataSource: any;
   priority: any[];
 

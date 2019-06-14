@@ -1,0 +1,45 @@
+<h2 class="content-block"><b>Portefeuille</b></h2>
+
+<dx-data-grid class="dx-card wide-card"
+    [dataSource]="store.sessionData"
+    [showBorders]="false"
+    [focusedRowEnabled]="true"
+    [focusedRowIndex]="0"
+    [columnAutoWidth]="true"
+    [columnHidingEnabled]="true">
+
+    <dxo-paging [pageSize]="6"></dxo-paging>
+    <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+    <dxo-filter-row [visible]="true"></dxo-filter-row>
+
+    <dxi-column
+    dataField="CompanyName"
+    [width]="40"
+    caption=""
+    [hidingPriority]="0">
+</dxi-column>
+<dxi-column
+    dataField="City"
+    [width]="100"
+    caption="Nom"
+    [hidingPriority]="0">
+</dxi-column>
+<dxi-column
+    dataField="State"
+    caption="Grp"
+    [width]="60"
+    [hidingPriority]="0">
+</dxi-column>
+<dxi-column
+    dataField="Phone"
+    caption="Dem."
+    [width]="60"
+    [hidingPriority]="0">
+    <dxo-lookup
+        [dataSource]="priority"
+        valueExpr="value"
+        
+        displayExpr="name">
+    </dxo-lookup>
+</dxi-column>
+</dx-data-grid>
