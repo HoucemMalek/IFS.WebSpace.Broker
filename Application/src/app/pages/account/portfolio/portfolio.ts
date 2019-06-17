@@ -8,11 +8,14 @@ import { PortfolioStore } from './portfolio.store';
   templateUrl: './portfolio.html',
   styleUrls: ['./portfolio.scss']
 })
+
+
 export class PortfolioComponent {
   items: any[];
-
+  now: Date = new Date();
   dataSource: any[];
   priority: any[];
+  downloads: any[];
   message = "message from portfolio";
   constructor() {
     this.items = [{
@@ -115,9 +118,12 @@ export class PortfolioComponent {
       "State": "Idaho",
       "BirthDate": "1968/12/01"
   }]
+
+
+   this.downloads = ["Trial For Visual Studio", "Trial For All Platforms", "Package Managers"];
   } 
   
-
+ 
   
   contentReady(e) {
     if (!e.component.getSelectedRowKeys().length)
@@ -127,4 +133,7 @@ selectionChanged(e) {
     e.component.collapseAll(-1);
     e.component.expandRow(e.currentSelectedRowKeys[0]);
 }
+
+
+
 }
