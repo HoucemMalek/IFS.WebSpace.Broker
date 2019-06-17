@@ -1,12 +1,8 @@
-
 <dx-toolbar>
         <dxi-item location="before"><b style="padding-left: 10px;">Marché en ligne</b>
         </dxi-item>
 </dx-toolbar>
-<dx-box
-direction="row"
-width="100%"
-[height]="60">
+<dx-box direction="row" width="100%" [height]="60" class="box1" >
 <dxi-item
     class=""
     [ratio]="1">
@@ -15,37 +11,37 @@ width="100%"
 <dxi-item
     class=""
     [ratio]="1">
-   <p>MPBS - 14:05:50<br> 100 (5,50 0,54%)</p> 
+    <p><b>MPBS</b> - 14:05:50<br> 100 (5,50 0,54%)</p> 
 </dxi-item>
 <dxi-item
     class=""
     [ratio]="1">
-   <p>MPBS - 14:05:50<br> 100 (5,50 0,54%)</p> 
+    <p><b>MPBS</b> - 14:05:50<br> 100 (5,50 0,54%)</p>  
 </dxi-item>
 <dxi-item
     class=""
     [ratio]="1">
-   <p>MPBS - 14:05:50<br> 100 (5,50 0,54%)</p> 
+    <p><b>MPBS</b> - 14:05:50<br> 100 (5,50 0,54%)</p>  
 </dxi-item>
 <dxi-item
     class=""
     [ratio]="1">
-   <p> MPBS - 14:05:50<br> 100 (5,50 0,54%)</p> 
+    <p><b>MPBS</b> - 14:05:50<br> 100 (5,50 0,54%)</p>  
 </dxi-item>
 <dxi-item
     class=""
     [ratio]="1">
-   <p>MPBS - 14:05:50<br> 100 (5,50 0,54%)</p> 
+    <p><b>MPBS</b> - 14:05:50<br> 100 (5,50 0,54%)</p>  
 </dxi-item>
 <dxi-item
     class=""
     [ratio]="1">
-   <p>MPBS - 14:05:50<br> 100 (5,50 0,54%)</p> 
+    <p><b>MPBS</b> - 14:05:50<br> 100 (5,50 0,54%)</p>  
 </dxi-item>
 </dx-box>
 
-<dx-box style="background-color: white" direction="row" width="100%" [height]="45">
-    <dxi-item class=""  [ratio]="1">
+<dx-box class="box1" style="background-color: white" direction="row" width="100%" [height]="60">
+    <dxi-item  class=""  [ratio]="1">
             <b style="padding-left: 10px;">Séance du:</b> <span>14/06/2019 (Fermée)</span>
     </dxi-item>
     <dxi-item class=""  [ratio]="1">
@@ -55,101 +51,148 @@ width="100%"
             <b style="padding-left: 10px;">Transactions:</b> <span>5.674.344,25</span>
     </dxi-item>
     <dxi-item class=""  [ratio]="1">
-            <b style="padding-left: 10px;"> TUNINDEX:</b> <span>7.076,61  -0,18%</span>
+            <b style="padding-left: 10px;"> TUNINDEX:</b> <span>7.076,61  -0,18%
+                <dx-button
+                class="button-info"
+                icon="assets/image/icons/transaction.png"
+                (onClick)="showInfo(employee)">
+            </dx-button>
+            </span>
     </dxi-item>
     <dxi-item class=""  [ratio]="1">
-            <b style="padding-left: 10px;">TUNINDEX20:</b> <span>7.076,61  -0,18%</span>
-    </dxi-item>
-</dx-box>
-<!-- <dx-toolbar [items]="store.items">
-
-    </dx-toolbar> -->
-<!-- <dx-html-editor>
-<dxo-toolbar>
-<dxi-item location="">Séance du: {{store.data.isinCode}}</dxi-item>
-<dxi-item>Volume: {{store.data.Nom}}</dxi-item>
-<dxi-item>Transaction: {{store.data.Grp}}</dxi-item>
-<dxi-item>TUNINDEX: {{store.data.Dem}}</dxi-item>
-<dxi-item widget="dxButton" [options]="toolbarButtonOptions">TUNINDEX20: {{store.data.Var}}</dxi-item>
-</dxo-toolbar>
-</dx-html-editor>
-<dx-popup [showTitle]="true" title="Markup" [(visible)]="popupVisible">
-        <ul>
-                <li>Inline formats:
-                    <ul>
-                        <li><strong>Bold</strong>, <em>italic</em>, <s>underlined</s> text formatting</li>
-                        <li>Font, size, color changes (HTML only)</li>
-                    </ul>
-                </li>
-                <li>Block formats:
-                    <ul>
-                        <li>Headers</li>
-                        <li>Text alignment</li>
-                        <li>Lists (ordered and unordered)</li>
-                        <li>Code blocks</li>
-                        <li>Quotes</li>
-                    </ul>
-                </li>
-                <li>Custom formats</li>
-                <li>HTML and Markdown support</li>
-                <li>Mail-merge placeholders (for example, %username%)</li>
-                <li>Adaptive toolbar for working images, links, and color formats</li>
-                <li>Insert images as a link or base64 (drag-and-drop images to convert them to base64)</li>
-                <li>Copy-paste rich content (unsupported formats are removed)</li>
-            </ul>
-    </dx-popup> -->
-
-    <dx-box
-    direction="row"
-    width="100%"
-    [height]="75">
-    <dxi-item
-        class="rect demo-dark"
-        [ratio]="1">
-        ratio = 1
-    </dxi-item>
-    <dxi-item
-        class="rect demo-light"
-        [ratio]="2">
-        ratio = 2
-    </dxi-item>
-    <dxi-item
-        class="rect demo-dark"
-        [ratio]="1">
-        ratio = 1
+            <b style="padding-left: 10px;">TUNINDEX20:</b> <span>7.076,61  -0,18%
+            <dx-button
+                class="button-info"
+                icon="assets/image/icons/transaction.png"
+                (onClick)="showInfo(employee)">
+            </dx-button>
+        </span>
     </dxi-item>
 </dx-box>
 
-    <!-- <div class="stats">
-            <div>
-                <div class="sub-title">Area, km<sup>2</sup></div>
-                <div class="stat-value">{{store.data.Nom}}</div>
-            </div>
-            <div>
-                <div class="sub-title">Population</div>
-                <div class="stat-value">{{store.data.Grp}}</div>
-            </div>
-            <div>
-                <div class="sub-title">GDP, billion</div>
-                <div class="stat-value">{{"$" + store.data.Var}}</div>
-            </div>
+<dx-popup
+        class="popup"
+        [width]="700"
+        [height]="600"
+        [showTitle]="true"
+        title="Transaction"
+        [dragEnabled]="false"
+        [closeOnOutsideClick]="true"
+        [(visible)]="popupVisible">
+        <div  *dxTemplate="let data of 'content'">
+<dx-box direction="row" width="100%" height="50%" class="box1" >
+<dxi-item
+class=""
+[ratio]="1">
+                           
+            <p>
+                Full Name:
+                <span>{{store.data.Nom}}</span>
+                <span>{{store.data.Var}}</span>
+            </p>
+            <p>
+                Birth Date:
+                <span>{{store.data.isinCode}}</span>
+            </p>
+            <p>
+                Grp:
+                <span>{{store.data.Grp}}</span>
+            </p>
+            <p>
+                Dem.:
+                <span>{{store.data.Dem}}</span>
+            </p>
+            <p>
+                Var:
+                <span>{{store.data.Var}}</span>
+            </p>
+            </dxi-item>
+        <dxi-item
+        class=""
+[ratio]="1">
+<dx-data-grid class="dx-card wide-card"
+[dataSource]="store.sessionDataTransaction"
+keyExpr="isinCode"
+[showBorders]="true"
+[focusedRowEnabled]="true" 
+[focusedRowIndex]="0"
+[columnAutoWidth]="false"
+[columnHidingEnabled]="true"
+>
+<dxo-paging [pageSize]="7"></dxo-paging> 
+<!--<dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+<dxo-filter-row [visible]="true"></dxo-filter-row> -->
+
+
+     <dxi-column
+        dataField="isinCode"
+        [width]="40"
+        caption="#"
+        [hidingPriority]="0"
+        >
+    </dxi-column>
+    <dxi-column
+        dataField="Nom"
+        [width]="100"
+        caption="Heure"
+        [hidingPriority]="0"
+        >
+    </dxi-column>
+    <dxi-column
+        dataField="Grp"
+        caption="Qté"
+        [width]="60"
+        [hidingPriority]="0"
+       >
+    </dxi-column>
+    <dxi-column
+        dataField="Grp"
+        caption="Cours"
+        [width]="60"
+        [hidingPriority]="0"
+        >
+        
+    </dxi-column>
+ </dx-data-grid>
+</dxi-item>
+</dx-box>
+<dx-box direction="col" width="100%" height="50%">
+        <dxi-item
+        
+        [ratio]="1">
+                      
+            <dx-chart
+                
+                id="zoomedChart"
+                [dataSource]="store.dataTransaction"
+                title="Google Inc. Stock Prices">
+                <dxi-series
+                    type="candleStick"
+                    openValueField="Open"
+                    highValueField="High"
+                    lowValueField="Low"
+                    closeValueField="Close"
+                    argumentField="Date">
+                    <dxo-aggregation [enabled]="true"></dxo-aggregation>
+                </dxi-series>
+                <dxo-margin [right]="10"></dxo-margin>
+                <dxi-value-axis valueType="numeric"></dxi-value-axis>
+                <dxo-argument-axis
+                    [valueMarginsEnabled]="false"
+                    argumentType="datetime">
+                    <dxo-grid [visible]="true"></dxo-grid>
+                    <dxo-label [visible]="false"></dxo-label>
+                </dxo-argument-axis>
+                <dxo-legend [visible]="false"></dxo-legend>
+                <dxo-tooltip [enabled]="true"></dxo-tooltip>
+            </dx-chart>
+            </dxi-item>
+            </dx-box>
+       
+            
+      
         </div>
-
-<div class="container" >
-        <div class="left" >Séance du: {{store.data.isinCode}}</div>
-        <div class="left" >Volume: {{store.data.Nom}}</div>
-        <div class="left" >Transaction: {{store.data.Grp}}</div>
-        <div class="left" >TUNINDEX: {{store.data.Dem}}</div>
-        <div class="left" >TUNINDEX20: {{store.data.Var}}</div>
-
-</div> -->
-<h2><b>Marché</b></h2>
-
-<div class="container">
-        <div class="left" *ngFor="let pd of store.sessionDataTransaction">Der: {{pd.Nom}}</div>
-
-</div>
-
+    </dx-popup>
 
 <dx-data-grid class="dx-card wide-card"
 [dataSource]="store.sessionData"
@@ -161,15 +204,9 @@ keyExpr="isinCode"
 [columnHidingEnabled]="true"
 (onSelectionChanged)="selectionChanged($event)"
 (onContentReady)="contentReady($event)"
-[masterDetail]="{ enabled: false, template: 'detail' }"
-
->
+[masterDetail]="{ enabled: false, template: 'detail' }">
 
 <dxo-selection mode="single"></dxo-selection>
-
-<!-- <dxo-paging [pageSize]="11"></dxo-paging> 
-<dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
-<dxo-filter-row [visible]="true"></dxo-filter-row> -->
 <dxo-scrolling
         [useNative]="true">
     </dxo-scrolling>
@@ -344,39 +381,357 @@ keyExpr="isinCode"
         [width]="70"
         [hidingPriority]="1">
     </dxi-column> 
-    <div *dxTemplate="let item of 'detail'">
-        <table>
+    
+        <div  *dxTemplate="let item of 'detail'" class="container">
+                
+        <table class="left"> 
         <tr>
-           <td><p>Der: {{item.data.Nom}}</p></td> 
-           <td><p>Var%: {{item.data.Nom}}</p></td> 
+           <td><p><b>Der:</b> {{item.data.Nom}}</p></td> 
+           <td><p><b>Var%:</b> {{item.data.Nom}}</p></td> 
         </tr>
         <tr>
-                <td><p>Ouv: {{item.data.Nom}}</p></td> 
-                <td><p>Clôt: {{item.data.Nom}}</p></td>
+            <td><p><b>Ouv:</b> {{item.data.Nom}}</p></td>
+            <td><p><b>Clôt:</b> {{item.data.Nom}}</p></td>
         </tr>
         <tr>
-                <td><p>+Haut: {{item.data.Nom}}</p></td> 
-                <td><p>+Bas: {{item.data.Nom}}</p></td>
+            <td><p><b>+Haut:</b> {{item.data.Nom}}</p></td>
+            <td><p><b>+Bas:</b> {{item.data.Nom}}</p></td>
+        </tr>
+        <tr>   
+            <td><p><b>SeuilH:</b> {{item.data.Nom}}</p></td> 
+            <td><p><b>SeuilB:</b> {{item.data.Nom}}</p></td>
         </tr>
         <tr>
-                <td><p>SeuilH: {{item.data.Nom}}</p></td> 
-                <td><p>SeuilB: {{item.data.Nom}}</p></td>
+            <td><p><b>QtéT:</b> {{item.data.Nom}}</p></td>
+            <td><p><b>Cap.Ech:</b> {{item.data.Nom}}</p></td>
         </tr>
         <tr>
-                <td><p>QtéT: {{item.data.Nom}}</p></td> 
-                <td><p>Cap.Ech: {{item.data.Nom}}</p></td>
-        </tr>
+            <td><p><b>CTO:</b> {{item.data.Nom}}</p></td>
+            <td><p><b>VTO:</b> {{item.data.Nom}}</p></td>
+        </tr>    
+            
         <tr>
-                <td><p>CTO: {{item.data.Nom}}</p></td> 
-                <td><p>VTO: {{item.data.Nom}}</p></td>
-        </tr>
-        <tr>
-                <td><p>QTO: {{item.data.Nom}}</p></td> 
-                <td><p>Vol.TO: {{item.data.Nom}}</p></td>
-        </tr>
+            <td><p><b>QTO:</b> {{item.data.Nom}}</p></td>
+            <td><p><b>Vol.TO:</b> {{item.data.Nom}}</p></td>
+        </tr>    
+      </table>
+    <dx-chart
+    class="left"
+    id="zoomedChart"
+    [dataSource]="store.dataTransaction"
+    title="Google Inc. Stock Prices">
+    <dxi-series
+        type="candleStick"
+        openValueField="Open"
+        highValueField="High"
+        lowValueField="Low"
+        closeValueField="Close"
+        argumentField="Date">
+        <dxo-aggregation [enabled]="true"></dxo-aggregation>
+    </dxi-series>
+    <dxo-margin [right]="10"></dxo-margin>
+    <dxi-value-axis valueType="numeric"></dxi-value-axis>
+    <dxo-argument-axis
+        [valueMarginsEnabled]="false"
+        argumentType="datetime">
+        <dxo-grid [visible]="true"></dxo-grid>
+        <dxo-label [visible]="false"></dxo-label>
+    </dxo-argument-axis>
+    <dxo-legend [visible]="false"></dxo-legend>
+    <dxo-tooltip [enabled]="true"></dxo-tooltip>
+</dx-chart>
 
 
-    </table>
-    </div>
+<dx-data-grid class="dx-card wide-card left left1"
+[dataSource]="store.sessionDataTransaction"
+keyExpr="isinCode"
+[showBorders]="true"
+[focusedRowEnabled]="true" 
+[focusedRowIndex]="0"
+[columnAutoWidth]="false"
+[columnHidingEnabled]="true"
+>
+<dxo-paging [pageSize]="7"></dxo-paging> 
+<!--<dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+<dxo-filter-row [visible]="true"></dxo-filter-row> -->
+
+
+     <dxi-column
+        dataField="isinCode"
+        [width]="40"
+        caption="#"
+        [hidingPriority]="0"
+        >
+    </dxi-column>
+    <dxi-column
+        dataField="Nom"
+        [width]="100"
+        caption="Heure"
+        [hidingPriority]="0"
+        >
+    </dxi-column>
+    <dxi-column
+        dataField="Grp"
+        caption="Qté"
+        [width]="60"
+        [hidingPriority]="0"
+       >
+    </dxi-column>
+    <dxi-column
+        dataField="Grp"
+        caption="Cours"
+        [width]="60"
+        [hidingPriority]="0"
+        >
+        
+    </dxi-column>
+ </dx-data-grid>
+  
+    <dx-data-grid class="dx-card wide-card left left1"
+[dataSource]="store.sessionDataTransaction"
+keyExpr="isinCode"
+[showBorders]="true"
+[focusedRowEnabled]="true" 
+[focusedRowIndex]="0"
+[columnAutoWidth]="true"
+[columnHidingEnabled]="true">
+
+<!-- <dxo-paging [pageSize]="11"></dxo-paging> 
+<dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+<dxo-filter-row [visible]="true"></dxo-filter-row> -->
+
+
+     <dxi-column
+        dataField="isinCode"
+        [width]="40"
+        caption="#"
+        [hidingPriority]="0"
+        >
+    </dxi-column>
+    <dxi-column
+        dataField="Nom"
+        [width]="100"
+        caption="Heure"
+        [hidingPriority]="0"
+        >
+    </dxi-column>
+    <dxi-column
+        dataField="Grp"
+        caption="QtéA"
+        [width]="60"
+        [hidingPriority]="0"
+       >
+    </dxi-column>
+    <dxi-column
+        dataField="Dem."
+        caption="Achat"
+        [width]="60"
+        [hidingPriority]="0"
+        >
+    </dxi-column>
+   
+    <dxi-column
+        dataField="NbrA"
+        caption="Vente"
+        [width]="80"
+        dataType="date"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="NbrA"
+        caption="QtéV"
+        [width]="80"
+        dataType="date"
+        [hidingPriority]="0">
+    </dxi-column>
+    <dxi-column
+        dataField="NbrA"
+        caption="HeureV"
+        [width]="80"
+        dataType="date"
+        [hidingPriority]="0">
+    </dxi-column>
+    </dx-data-grid>
+ 
+</div>
+
+
+   
 </dx-data-grid> 
 
+<!-- <dx-range-selector
+                [dataSource]="store.dataTransaction"
+                (onValueChanged)="valueChanged($event)">
+                <dxo-size [height]="120"></dxo-size>
+                <dxo-scale
+                    minorTickInterval="day"
+                    tickInterval="month"
+                    valueType="datetime"
+                    aggregationInterval="week"
+                    [placeholderHeight]="20">
+                </dxo-scale>
+                <dxo-behavior
+                    callValueChanged="onMoving"
+                    [snapToTicks]="false">
+                </dxo-behavior>
+                <dxo-chart>
+                    <dxo-value-axis valueType="numeric"></dxo-value-axis>
+                    <dxi-series
+                        type="line"
+                        valueField="Open"
+                        argumentField="Date">
+                        <dxo-aggregation [enabled]="true"></dxo-aggregation>
+                    </dxi-series>
+                </dxo-chart>
+            </dx-range-selector> -->
+            <!-- <dx-toolbar [items]="store.items">
+
+    </dx-toolbar> -->
+<!-- <dx-html-editor>
+<dxo-toolbar>
+<dxi-item location="">Séance du: {{store.data.isinCode}}</dxi-item>
+<dxi-item>Volume: {{store.data.Nom}}</dxi-item>
+<dxi-item>Transaction: {{store.data.Grp}}</dxi-item>
+<dxi-item>TUNINDEX: {{store.data.Dem}}</dxi-item>
+<dxi-item widget="dxButton" [options]="toolbarButtonOptions">TUNINDEX20: {{store.data.Var}}</dxi-item>
+</dxo-toolbar>
+</dx-html-editor>
+<dx-popup [showTitle]="true" title="Markup" [(visible)]="popupVisible">
+        <ul>
+                <li>Inline formats:
+                    <ul>
+                        <li><strong>Bold</strong>, <em>italic</em>, <s>underlined</s> text formatting</li>
+                        <li>Font, size, color changes (HTML only)</li>
+                    </ul>
+                </li>
+                <li>Block formats:
+                    <ul>
+                        <li>Headers</li>
+                        <li>Text alignment</li>
+                        <li>Lists (ordered and unordered)</li>
+                        <li>Code blocks</li>
+                        <li>Quotes</li>
+                    </ul>
+                </li>
+                <li>Custom formats</li>
+                <li>HTML and Markdown support</li>
+                <li>Mail-merge placeholders (for example, %username%)</li>
+                <li>Adaptive toolbar for working images, links, and color formats</li>
+                <li>Insert images as a link or base64 (drag-and-drop images to convert them to base64)</li>
+                <li>Copy-paste rich content (unsupported formats are removed)</li>
+            </ul>
+    </dx-popup> -->
+
+    <!-- <dx-box
+    direction="row"
+    width="100%"
+    [height]="75">
+    <dxi-item
+        class="rect demo-dark"
+        [ratio]="1">
+        ratio = 1
+    </dxi-item>
+    <dxi-item
+        class="rect demo-light"
+        [ratio]="2">
+        ratio = 2
+    </dxi-item>
+    <dxi-item
+        class="rect demo-dark"
+        [ratio]="1">
+        ratio = 1
+    </dxi-item>
+</dx-box> -->
+
+    <!-- <div class="stats">
+            <div>
+                <div class="sub-title">Area, km<sup>2</sup></div>
+                <div class="stat-value">{{store.data.Nom}}</div>
+            </div>
+            <div>
+                <div class="sub-title">Population</div>
+                <div class="stat-value">{{store.data.Grp}}</div>
+            </div>
+            <div>
+                <div class="sub-title">GDP, billion</div>
+                <div class="stat-value">{{"$" + store.data.Var}}</div>
+            </div>
+        </div>
+
+<div class="container" >
+        <div class="left" >Séance du: {{store.data.isinCode}}</div>
+        <div class="left" >Volume: {{store.data.Nom}}</div>
+        <div class="left" >Transaction: {{store.data.Grp}}</div>
+        <div class="left" >TUNINDEX: {{store.data.Dem}}</div>
+        <div class="left" >TUNINDEX20: {{store.data.Var}}</div>
+
+</div> -->
+<!-- <h2><b>Marché</b></h2>
+
+<div class="container">
+        <div class="left" *ngFor="let pd of store.sessionDataTransaction">Der: {{pd.Nom}}</div>
+
+</div> -->
+
+<!-- <div id="chart-demo">
+    <dx-chart
+        id="zoomedChart"
+        [dataSource]="store.dataTransaction"
+        title="Google Inc. Stock Prices">
+        <dxi-series
+            type="candleStick"
+            openValueField="Open"
+            highValueField="High"
+            lowValueField="Low"
+            closeValueField="Close"
+            argumentField="Date">
+            <dxo-aggregation [enabled]="true"></dxo-aggregation>
+        </dxi-series>
+        <dxo-margin [right]="10"></dxo-margin>
+        <dxi-value-axis valueType="numeric"></dxi-value-axis>
+        <dxo-argument-axis
+            [valueMarginsEnabled]="false"
+            argumentType="datetime">
+            <dxo-grid [visible]="true"></dxo-grid>
+            <dxo-label [visible]="false"></dxo-label>
+        </dxo-argument-axis>
+        <dxo-legend [visible]="false"></dxo-legend>
+        <dxo-tooltip [enabled]="true"></dxo-tooltip>
+    </dx-chart>
+    <dx-range-selector
+        [dataSource]="store.dataTransaction"
+        (onValueChanged)="valueChanged($event)">
+        <dxo-size [height]="120"></dxo-size>
+        <dxo-scale
+            minorTickInterval="day"
+            tickInterval="month"
+            valueType="datetime"
+            aggregationInterval="week"
+            [placeholderHeight]="20">
+        </dxo-scale>
+        <dxo-behavior
+            callValueChanged="onMoving"
+            [snapToTicks]="false">
+        </dxo-behavior>
+        <dxo-chart>
+            <dxo-value-axis valueType="numeric"></dxo-value-axis>
+            <dxi-series
+                type="line"
+                valueField="Open"
+                argumentField="Date">
+                <dxo-aggregation [enabled]="true"></dxo-aggregation>
+            </dxi-series>
+        </dxo-chart>
+    </dx-range-selector>
+</div> -->
+<!-- <div class="container" >
+        <div class="left" >Séance du: {{store.data.isinCode}}</div>
+        <div class="left" >Volume: {{store.data.Nom}}</div>
+        <div class="left" >Transaction: {{store.data.Grp}}</div>
+        <div class="left" >TUNINDEX: {{store.data.Dem}}</div>
+        <div class="left" >TUNINDEX20: {{store.data.Var}}</div>
+
+</div> -->
+<!-- <dxo-paging [pageSize]="11"></dxo-paging> 
+<dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
+<dxo-filter-row [visible]="true"></dxo-filter-row> -->

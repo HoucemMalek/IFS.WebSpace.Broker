@@ -5,7 +5,7 @@ import { AuthGuardService } from './shared/services';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 
-import { DxDataGridModule, DxFormModule ,DxButtonModule ,DxToolbarModule, DxHtmlEditorModule, DxPopupModule, DxBoxModule } from 'devextreme-angular';
+import { DxDataGridModule, DxFormModule ,DxButtonModule ,DxToolbarModule, DxHtmlEditorModule, DxPopupModule, DxBoxModule, DxChartModule, DxChartComponent, DxRangeSelectorModule } from 'devextreme-angular';
 import { OrderBookComponent } from './pages/trading/order-book/order-book';
 
 import { OrderHistoryComponent } from './pages/trading/order-history/order-history';
@@ -71,7 +71,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), DxDataGridModule, DxFormModule, DxButtonModule,CommonModule,DxPopupModule,DxToolbarModule, DxHtmlEditorModule,DxBoxModule],
+  imports: [RouterModule.forRoot(routes), DxDataGridModule,DxRangeSelectorModule, DxFormModule,DxChartModule , DxButtonModule,CommonModule,DxPopupModule,DxToolbarModule, DxHtmlEditorModule,DxBoxModule],
   providers: [AuthGuardService],
   exports: [RouterModule],
   declarations: [HomeComponent, OrderComponent, ProfileComponent, OrderBookComponent,PortfolioComponent, OrderHistoryComponent, TransactionHistoryComponent, SessionComponent,InstrumentSummaryComponent]

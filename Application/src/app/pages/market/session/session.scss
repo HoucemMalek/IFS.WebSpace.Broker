@@ -1,7 +1,10 @@
 .container {height: 100%; width:100%; font-size: 20px;}
 .left{display: inline-block; *display: inline; zoom: 1; vertical-align: top; font-size: 15px;}
 .left {width: 20%;
-    padding: 10px 10px 10px 10px;}
+    padding: 5px 5px 5px 5px;
+    margin-left: 2%}
+
+    
 // .gridContainer {
 //     height: 50%;
 // }
@@ -50,4 +53,51 @@
     border: 1px solid lightgray;
 }
 
+::ng-deep .button-info {
+    margin: 1px;
+}
 
+::ng-deep #chart-demo {
+    height: 450px;
+    width: 100%;
+}
+::ng-deep #zoomedChart {
+    height: 315px;
+    margin: 0 0 15px;
+}
+::ng-deep #chart-demo > div:not(#zoomedChart) {
+    height: 120px;
+}
+
+.row1{
+    display: inline-block; *display: inline; 
+}
+
+.left1{
+    height: 330px;
+}
+table {
+border: medium solid #ffffff;
+width: 50%;
+line-height: 70%;
+}
+td {
+border: thin solid #ffffff;
+width: 50%;
+
+}
+
+.box1{
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.box2{
+    padding-left: 10px;
+    padding-top: 5px;
+    height: 50px;
+}
+
+.chart1{
+    height: 50%;
+}
