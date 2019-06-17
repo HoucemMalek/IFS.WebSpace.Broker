@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,Input } from '@angular/core';
 
 @Component({
   selector:'app-home',
@@ -7,9 +7,14 @@ import { Component } from '@angular/core';
 })
 
 export class HomeComponent {
+  @Input() childMessage: string;
   constructor() {}
 
   helloWorld() {
     alert('Hello world!');
+}
+
+getResolution() {
+  alert("Your screen resolution is: " + screen.width + "x" + screen.height);
 }
 }
