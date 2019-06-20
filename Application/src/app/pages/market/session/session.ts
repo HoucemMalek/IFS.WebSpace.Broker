@@ -1,4 +1,4 @@
-import { Component, ViewChild} from '@angular/core';
+import { Component, ViewChild, OnInit} from '@angular/core';
 import { SessionStore } from "./session.store";
 import 'devextreme/data/odata/store';
 import { DxChartComponent } from 'devextreme-angular';
@@ -14,10 +14,14 @@ export class SessionComponent{
   stockPrices: any[];
   sessionData: any;
   priority: any[];
+ 
 
   constructor(private store : SessionStore) {
     this.stockPrices = store.data;
+
+   
   }
+  
   valueChanged(e: any) {
     this.chart.instance.zoomArgument(new Date(e.value[0]), new Date(e.value[1]));
 }
@@ -36,4 +40,9 @@ showInfo(employee) {
   this.sessionData = employee;
   this.popupVisible = true;
 }
+// ngOnInit() {
+//    this.store.load();
+//   }
+
+
 }

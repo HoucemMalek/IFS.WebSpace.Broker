@@ -1,21 +1,27 @@
 
 import 'devextreme/data/odata/store';
 import ArrayStore from "devextreme/data/array_store";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+
+import  { devVariables } from '../../../../environments/development';
+import { Injectable, Inject } from '@angular/core';
 
 
 
+@Injectable()
 export class SessionStore{
 sessionData:any[];
 data:any;
 sessionDataTransaction:any[];
-  dataSource: any;
-  priority: any[];
-  items:any[];
-  connectionStarted: boolean;
-  dataTransaction:any[];
+dataSource: any;
+priority: any[];
+items:any[];
+connectionStarted: boolean;
+dataTransaction:any[];
 
 
-  constructor() {
+  constructor(/*private Http : HttpClient,
+    @Inject(devVariables) private env*/) {
 
     this.dataTransaction = [{
       "Date":  "04/23/2013",
@@ -2397,5 +2403,26 @@ sessionDataTransaction:any[];
   
 
 }
-}
 
+// load(){
+    
+        
+//     let headers = new HttpHeaders({
+//         'Content-Type': 'application/json'
+//      });
+//      let options = {
+//         headers: headers
+//      }
+    
+    
+//     this.Http.get(this.env.marketInstrumentsApiEndpoint, options).map(res => res.json()).subscribe(
+//         (data) => {
+// 		session = data;}
+    
+//     console.log('hello');
+// }
+
+
+
+
+}

@@ -15,6 +15,7 @@ import { OrderComponent } from './pages/trading/order/order';
 import { InstrumentSummaryComponent } from './pages/market/instrument-summary/instrument-summary';
 import { PortfolioComponent } from './pages/account/portfolio/portfolio';
 import { CommonModule } from '@angular/common';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 
@@ -71,7 +72,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), DxDataGridModule,DxRangeSelectorModule, DxFormModule,DxChartModule , DxButtonModule,CommonModule,DxPopupModule,DxToolbarModule, DxHtmlEditorModule,DxBoxModule],
+  imports: [RouterModule.forRoot(routes), DxDataGridModule,DxRangeSelectorModule,HttpClientModule, DxFormModule,DxChartModule , DxButtonModule,CommonModule,DxPopupModule,DxToolbarModule, DxHtmlEditorModule,DxBoxModule],
   providers: [AuthGuardService],
   exports: [RouterModule],
   declarations: [HomeComponent, OrderComponent, ProfileComponent, OrderBookComponent,PortfolioComponent, OrderHistoryComponent, TransactionHistoryComponent, SessionComponent,InstrumentSummaryComponent]

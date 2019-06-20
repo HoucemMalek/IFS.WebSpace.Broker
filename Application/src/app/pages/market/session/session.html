@@ -1,5 +1,5 @@
-<dx-toolbar>
-        <dxi-item location="before"><b style="padding-left: 10px;">Marché en ligne</b>
+<dx-toolbar style="background-color: #363640;">
+        <dxi-item location="center"><b style="padding-left: 10px; color: white;">Marché en ligne</b>
         </dxi-item>
 </dx-toolbar>
 <dx-box direction="row" width="100%" [height]="60" class="box1" >
@@ -39,7 +39,6 @@
     <p><b>MPBS</b> - 14:05:50<br> 100 (5,50 0,54%)</p>  
 </dxi-item>
 </dx-box>
-
 <dx-box class="box1" style="background-color: white" direction="row" width="100%" [height]="60">
     <dxi-item  class=""  [ratio]="1">
             <b style="padding-left: 10px;">Séance du:</b> <span>14/06/2019 (Fermée)</span>
@@ -69,7 +68,6 @@
         </span>
     </dxi-item>
 </dx-box>
-
 <dx-popup
         class="popup"
         [width]="700"
@@ -79,13 +77,10 @@
         [dragEnabled]="false"
         [closeOnOutsideClick]="true"
         [(visible)]="popupVisible">
-        <div  *dxTemplate="let data of 'content'">
+<div  *dxTemplate="let data of 'content'">
 <dx-box direction="row" width="100%" height="50%" class="box1" >
-<dxi-item
-class=""
-[ratio]="1">
-                           
-            <p>
+<dxi-item class="" [ratio]="1">
+           <p>
                 Full Name:
                 <span>{{store.data.Nom}}</span>
                 <span>{{store.data.Var}}</span>
@@ -107,8 +102,8 @@ class=""
                 <span>{{store.data.Var}}</span>
             </p>
             </dxi-item>
-        <dxi-item
-        class=""
+<dxi-item
+class=""
 [ratio]="1">
 <dx-data-grid class="dx-card wide-card"
 [dataSource]="store.sessionDataTransaction"
@@ -117,14 +112,11 @@ keyExpr="isinCode"
 [focusedRowEnabled]="true" 
 [focusedRowIndex]="0"
 [columnAutoWidth]="false"
-[columnHidingEnabled]="true"
->
+[columnHidingEnabled]="true">
 <dxo-paging [pageSize]="7"></dxo-paging> 
 <!--<dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
 <dxo-filter-row [visible]="true"></dxo-filter-row> -->
-
-
-     <dxi-column
+    <dxi-column
         dataField="isinCode"
         [width]="40"
         caption="#"
@@ -153,7 +145,7 @@ keyExpr="isinCode"
         >
         
     </dxi-column>
- </dx-data-grid>
+</dx-data-grid>
 </dxi-item>
 </dx-box>
 <dx-box direction="col" width="100%" height="50%">
@@ -161,9 +153,7 @@ keyExpr="isinCode"
         
         [ratio]="1">
                       
-            <dx-chart
-                
-                id="zoomedChart"
+            <dx-chart id="zoomedChart"
                 [dataSource]="store.dataTransaction"
                 title="Google Inc. Stock Prices">
                 <dxi-series
@@ -188,12 +178,8 @@ keyExpr="isinCode"
             </dx-chart>
             </dxi-item>
             </dx-box>
-       
-            
-      
-        </div>
-    </dx-popup>
-
+</div>
+</dx-popup>
 <dx-data-grid class="dx-card wide-card"
 [dataSource]="store.sessionData"
 keyExpr="isinCode"
@@ -205,7 +191,6 @@ keyExpr="isinCode"
 (onSelectionChanged)="selectionChanged($event)"
 (onContentReady)="contentReady($event)"
 [masterDetail]="{ enabled: false, template: 'detail' }">
-
 <dxo-selection mode="single"></dxo-selection>
 <dxo-scrolling
         [useNative]="true">
@@ -382,47 +367,53 @@ keyExpr="isinCode"
         [hidingPriority]="1">
     </dxi-column> 
     
-        <div  *dxTemplate="let item of 'detail'" class="container">
-                
-        <table class="left"> 
-        <tr>
-           <td><p><b>Der:</b> {{item.data.Nom}}</p></td> 
-           <td><p><b>Var%:</b> {{item.data.Nom}}</p></td> 
-        </tr>
-        <tr>
-            <td><p><b>Ouv:</b> {{item.data.Nom}}</p></td>
-            <td><p><b>Clôt:</b> {{item.data.Nom}}</p></td>
-        </tr>
-        <tr>
-            <td><p><b>+Haut:</b> {{item.data.Nom}}</p></td>
-            <td><p><b>+Bas:</b> {{item.data.Nom}}</p></td>
-        </tr>
-        <tr>   
-            <td><p><b>SeuilH:</b> {{item.data.Nom}}</p></td> 
-            <td><p><b>SeuilB:</b> {{item.data.Nom}}</p></td>
-        </tr>
-        <tr>
-            <td><p><b>QtéT:</b> {{item.data.Nom}}</p></td>
-            <td><p><b>Cap.Ech:</b> {{item.data.Nom}}</p></td>
-        </tr>
-        <tr>
-            <td><p><b>CTO:</b> {{item.data.Nom}}</p></td>
-            <td><p><b>VTO:</b> {{item.data.Nom}}</p></td>
-        </tr>    
-            
-        <tr>
-            <td><p><b>QTO:</b> {{item.data.Nom}}</p></td>
-            <td><p><b>Vol.TO:</b> {{item.data.Nom}}</p></td>
-        </tr>    
-      </table>
-    <dx-chart
-    class="left"
-    id="zoomedChart"
-    [dataSource]="store.dataTransaction"
-    title="Google Inc. Stock Prices">
-    <dxi-series
-        type="candleStick"
-        openValueField="Open"
+<div  *dxTemplate="let item of 'detail'" class="container">
+<dx-box direction="row" width="100%"  class="box1" >
+    <dxi-item
+    class=""
+    [ratio]="1">
+<dx-box direction="row" width="100%"  class="" >
+    <dxi-item class="" [ratio]="1">
+        <span><b>Der:</b></span> 
+        <span><b>Var%:</b></span>
+        <span><b>Ouv:</b></span>
+        <span><b>Clôt:</b></span>
+        <span><b>+Haut:</b></span>
+        <span><b>+Bas:</b></span>
+        <span><b>SeuilH:</b></span>
+    </dxi-item>
+    <dxi-item class="" [ratio]="1">
+         <span>{{item.data.Nom}}</span>
+         <span>{{item.data.Nom}}</span>
+         <span>{{item.data.Nom}}</span>
+         <span>{{item.data.Nom}}</span>
+         <span>{{item.data.Nom}}</span>
+         <span>{{item.data.Nom}}</span>
+         <span>{{item.data.Nom}}</span>
+    </dxi-item>
+    <dxi-item class="" [ratio]="1">
+         <span><b>SeuilB:</b></span>
+         <span><b>QtéT:</b></span>
+         <span><b>Cap.Ech:</b></span>
+         <span><b>CTO:</b></span>
+         <span><b>VTO:</b></span>
+         <span><b>QTO:</b></span>
+         <span><b>Vol.TO:</b></span>
+    </dxi-item>
+    <dxi-item class="" [ratio]="1">
+         <span>{{item.data.Nom}}</span>
+         <span>{{item.data.Nom}}</span>
+         <span>{{item.data.Nom}}</span>
+         <span>{{item.data.Nom}}</span>
+         <span>{{item.data.Nom}}</span>
+         <span>{{item.data.Nom}}</span>
+         <span>{{item.data.Nom}}</span>
+    </dxi-item>
+</dx-box>
+</dxi-item>
+<dxi-item class=""  [ratio]="1">
+    <dx-chart class="" style="height:200px;" id="zoomedChart" [dataSource]="store.dataTransaction" title="Google Inc. Stock Prices">
+    <dxi-series   type="candleStick" openValueField="Open"
         highValueField="High"
         lowValueField="Low"
         closeValueField="Close"
@@ -439,10 +430,12 @@ keyExpr="isinCode"
     </dxo-argument-axis>
     <dxo-legend [visible]="false"></dxo-legend>
     <dxo-tooltip [enabled]="true"></dxo-tooltip>
-</dx-chart>
+</dx-chart></dxi-item>
 
-
-<dx-data-grid class="dx-card wide-card left left1"
+<dxi-item
+class=""
+[ratio]="1">
+<dx-data-grid class="dx-card wide-card left"
 [dataSource]="store.sessionDataTransaction"
 keyExpr="isinCode"
 [showBorders]="true"
@@ -486,8 +479,12 @@ keyExpr="isinCode"
         
     </dxi-column>
  </dx-data-grid>
-  
-    <dx-data-grid class="dx-card wide-card left left1"
+ </dxi-item>
+ 
+<dxi-item
+class=""
+[ratio]="1">
+<dx-data-grid class="dx-card wide-card left"
 [dataSource]="store.sessionDataTransaction"
 keyExpr="isinCode"
 [showBorders]="true"
@@ -552,11 +549,10 @@ keyExpr="isinCode"
         [hidingPriority]="0">
     </dxi-column>
     </dx-data-grid>
- 
+    </dxi-item>
+    </dx-box>
 </div>
 
-
-   
 </dx-data-grid> 
 
 <!-- <dx-range-selector
