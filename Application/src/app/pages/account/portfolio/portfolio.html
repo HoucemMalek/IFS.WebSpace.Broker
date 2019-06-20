@@ -1,34 +1,65 @@
 
-<!-- <h2 class="content-block"><b>Portefeuille</b></h2> -->
+<dx-toolbar class = "">
+    <dxi-item location="center"><span class="title">Portefeuille</span>
+    </dxi-item>
+</dx-toolbar>
+
+<dx-toolbar class="toolbarBorder">
+        <dxi-item location="before" >
+                <span >Date :</span>
+        </dxi-item> 
+        <dxi-item location="before" >
+                <dx-date-box  [value]="now" type="date" width="200" displayFormat="dd/MM/yyyy" 
+                    pickerType=""  [showClearButton]="false" [disabled]="false" applyValueMode="useButtons">
+                </dx-date-box>
+        </dxi-item> 
+        <dxi-item location="before" >
+                <span>Compte :</span>
+        </dxi-item> 
+        <dxi-item location="before" >
+                <dx-drop-down-button
+                text="Download DevExtreme Trial"
+                icon="user"
+                [items]="downloads"
+            ></dx-drop-down-button>
+        </dxi-item> 
+        <dxi-item location="after" >
+                <dx-button  text="Etat de portefeuille"   icon="far fa-file-alt">
+                    </dx-button>
+        </dxi-item> 
+        <dxi-item location="after" >
+                <dx-button  text="Etat de portefeuille consolidé"  icon="far fa-file-alt"  >
+                </dx-button>
+        </dxi-item> 
+</dx-toolbar>
 <section class="main">
-        
-    <section class="left-side">
-   <dx-data-grid class="dx-card wide-card grid"
-       [dataSource]="dataSource"
-       keyExpr = "ID"
-       [showBorders]="false"
-       [focusedRowEnabled]="true"
-       [focusedRowIndex]=""
-       [columnAutoWidth]="true"
-       [columnHidingEnabled]="true"
-       [masterDetail]="{ enabled: false, template: 'detail' }"
-       (onSelectionChanged)="selectionChanged($event)"
-      
-   >
+    <!-- <div class="left-side dx-card"> -->
+        <dx-data-grid class=" dx-card wide-card grid"
+            [dataSource] ="dataSource"
+            keyExpr = "ID"
+            [showBorders]="false"
+            [focusedRowEnabled]="true"
+            [focusedRowIndex]=""
+            [columnAutoWidth]="true"
+            [columnHidingEnabled]="true"
+            [masterDetail]="{ enabled: false, template: 'detail' }"
+            (onSelectionChanged)="selectionChanged($event)"
+            
+        >
    <dxo-selection mode="single"></dxo-selection>
-   <dxo-paging [pageSize]=""></dxo-paging> 
+    <dxo-paging [pageSize]=""></dxo-paging>  
    <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
-   <dxo-filter-row [visible]="true"></dxo-filter-row> 
+   <!-- <dxo-filter-row [visible]="true"></dxo-filter-row>  -->
 
    <dxi-column
        dataField="ID"
-       [width]="40"
+       [width]="50"
        caption=""
        [hidingPriority]="0">
    </dxi-column>
    <dxi-column
        dataField="Prefix"
-       [width]="40"
+       [width]="100"
        caption="Titre"
        [hidingPriority]="0">
    </dxi-column>
@@ -42,13 +73,13 @@
        dataField="LastName"
        [width]="100"
        caption="Réservé"
-       [hidingPriority]="0">
+       [hidingPriority]="0"> -->
        <!-- <dxo-lookup
            [dataSource]="priority"
            valueExpr="value"
            displayExpr="name">
        </dxo-lookup> -->
-   </dxi-column>
+  </dxi-column>
    <dxi-column
        dataField="Position"
        caption="CMP"
@@ -67,46 +98,163 @@
        dataType="date"
        [hidingPriority]="0">
    </dxi-column>
-   <!-- <dxi-column
-       dataField="Task_Priority"
+   <dxi-column
+       dataField="BirthDate"
        caption="Cours"
+       dataType="date"
        [hidingPriority]="0">
    </dxi-column>
    <dxi-column
-       dataField="Task_Completion"
+       dataField="BirthDate"
        caption="Var%"
+       dataType="date"
        [hidingPriority]="0">
    </dxi-column>
    <dxi-column
-       dataField="Task_Completion"
+       dataField="BirthDate"
        caption="Valorisation"
+       dataType="date"
        [hidingPriority]="0">
    </dxi-column>
    <dxi-column
-       dataField="Task_Completion"
+       dataField="BirthDate"
        caption="+/- Value"
+       dataType="date"
        [hidingPriority]="0">
    </dxi-column>
    <dxi-column
-       dataField="Task_Completion"
-       caption="+/- Value (%)"
+       dataField="BirthDate"
+       caption="+/- Value(%)"
+       dataType="date"
        [hidingPriority]="0">
-   </dxi-column>
-   <dxi-column
-       dataField="Task_Completion"
-       caption=""
-       
-       [hidingPriority]="0">
-   </dxi-column> -->
-   <div *dxTemplate="let item of 'detail'" class="instrumentDetail">
+   </dxi-column> 
+  
+   <!-- <div *dxTemplate="let item of 'detail'" class="instrumentDetail">
        <div class="">
            <p class="">{{item.data.Prefix}}</p>
        </div>
-   </div>
+   </div> -->
 </dx-data-grid>
+<!-- </div> -->
+<section class="right-side dx-card"  >
+       <!-- <app-home [childMessage]="message"></app-home> -->
+       <div class="dx-card">
+            <dx-toolbar class = "">
+                    <dxi-item location="center"><span class="title">Positions titres et liquidités au 17/06/2019</span>
+                    </dxi-item>
+                </dx-toolbar>
+            <div >
+                        <dx-box
+                            direction="row"
+                            width="100%"
+                            [height]=""
+                            class="padding5"
+                           >
+                            <dxi-item
+                            style = "text-align: left; "
+                                [ratio]="1">
+                                <span class="bold fontSize11 padding5">Portefeuille titres:</span>
+                                <span class="bold fontSize11 padding5">Emploi monétaire: </span>
+                                <span class="bold fontSize11 padding5">Solde Espèces: </span>
+                                <span class="bold fontSize11 padding5">Total portefeuille:</span>
+                            </dxi-item>
+                            <dxi-item
+                                style = "text-align: right; "
+                                [ratio]="1">
+                                <span class="bold fontSize11 padding5">418,724</span>
+                                <span class="bold fontSize11 padding5"> 0,000</span>
+                                <span class="bold fontSize11 padding5">93,958</span>
+                                <span class="bold fontSize11 padding5">512,682</span>
+                            </dxi-item>
+                           
+                        </dx-box>
+                       
+                        <dx-box
+                        direction="row"
+                        width="100%"
+                        [height]=""
+                        style="padding: 5px;">
+                        
+                        <dxi-item
+                        style = "text-align: left; "
+                            [ratio]="1">
+                            <span class="bold fontSize10 padding5">Solde Espèces:</span>
+                            <span class="bold fontSize10 padding5">Op°.Non.Dén: </span>
+                            <span class="bold fontSize10 padding5">Vers.Non.Dén:</span>
+                            <span class="bold fontSize10 padding5">Liq Réservées:</span>
+                        </dxi-item>
+                        <dxi-item
+                        style = "text-align: right;"
+                            [ratio]="1">
+                            <span class="bold fontSize10 padding5">418,724</span>
+                            <span class="bold fontSize10 padding5"> 0,000</span>
+                            <span class="bold fontSize10 padding5">93,958</span>
+                            <span class="bold fontSize10 padding5">512,682</span>
+                        </dxi-item>
+                        <dxi-item
+                        style = "text-align: left;padding-left:10px"
+                            [ratio]="1">
+                            <span class="bold fontSize10 padding5">Disponible:</span>
+                            <span class="bold fontSize10 padding5">Fonds Disp.:</span>
+                            <span class="bold fontSize10 padding5">Tot. Fonds:</span>
+                        </dxi-item>
+                        <dxi-item
+                        style = "text-align: right;"
+                            [ratio]="1">
+                            <span class="bold fontSize10 padding5">418,724</span>
+                            <span class="bold fontSize10 padding5"> 0,000</span>
+                            <span class="bold fontSize10 padding5">93,958</span>
+                        </dxi-item>
+                    
+                    </dx-box>
+                
+                   
+        </div>
+        <dx-pie-chart
+        id="pieChart"
+        palette="Soft Pastel"
+        [dataSource]="LanguageData">
+       
+            <dxo-title text="Pondération Portefeuille" >
+                <dxo-font color="black" size="20">
+                </dxo-font>
+            </dxo-title>
+            <dxo-legend  [visible]="false"
+            horizontalAlignment="center"
+            verticalAlignment="bottom"></dxo-legend>
+        <!-- <dxo-export [enabled]="true"></dxo-export> -->
+        <dxi-series
+            argumentField="language"
+            valueField="percent">
+            <dxo-label
+                [visible]="true"
+                format="fixedPoint"
+                [customizeText]="customizeLabel">
+                <dxo-connector
+                    [visible]="true"
+                    [width]="0.5"></dxo-connector>
+            </dxo-label>
+          
+            <dxo-small-values-grouping
+                mode="smallValueThreshold"
+                [threshold]="4.5"></dxo-small-values-grouping> 
+        </dxi-series>
 
-</section>
-<section class="right-side" >
-       <app-home [childMessage]="message"></app-home>
+        <dxo-tooltip
+        [enabled]="true"
+        [customizeTooltip]="customizeTooltip"
+        format="fixedPoint">
+    </dxo-tooltip>
+    </dx-pie-chart>
+        <!-- <div class="dx-card ">
+                <dx-toolbar class = "darkBackground">
+                        <dxi-item location="center"><span class="title">Pondération portefeuille</span>
+                        </dxi-item>
+                    </dx-toolbar>
+                <div class="dx-card responsive-paddings">
+            Say {{ childMessage }}
+                </div> 
+        </div> -->
+    </div>
 </section>  
 </section>   
