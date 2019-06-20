@@ -1,15 +1,17 @@
 
 .grid {
-    // height: 400px;
-     margin-left: 0px;
+     position: absolute;
+     bottom: 5px;
+     width:70%;
+     top:90px;
+     left:5px;
  }
  .main {
-    
      display: -webkit-flex; /* Safari */
      display: flex;
     // padding: 20px 20px 20px;
-     // -moz-box-sizing: border-box;
-     // -webkit-box-sizing: border-box;
+    //  -moz-box-sizing: border-box;
+    //  -webkit-box-sizing: border-box;
      /* box-sizing: border-box; */
      height: 100%;
  }
@@ -19,30 +21,37 @@
  // }
  .right-side {
      float: right;
-    // margin-left: 450px;
-     width: 30%;
+     width: 29%;
+    // bottom: 0;
+     position:absolute;
+    // width:70%;
+     //top:89px;
+     right: 0;
+     
+
  }
- .left-side {
-     width: 70%;
-     float: left;
-    // color: #848484;
-     font-size: 16px;
-     font-weight: normal;
- }
+//  .left-side {
+    
+//      width: 72%;
+//      float: left;
+//     // color: #848484;
+//      font-size: 16px;
+//      font-weight: normal;
+//  }
  
  .left-side, .right-side {
      height: 100%;
      background-color: transparent;
     // border: 1px solid #cfcfcf;
-     border-radius: 1px;
+     border-radius: 5px;
     // box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1);
-     padding: 10px;
+     padding: 5px;
      box-sizing: border-box;
  }
  
  
  ::ng-deep .instrumentDetail {
-     height: 200px;
+     height: 100%;
      // float: left;
      // padding: 20px 20px 20px 0;
  }

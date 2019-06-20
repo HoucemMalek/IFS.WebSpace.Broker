@@ -4,8 +4,8 @@ import { LoginFormComponent } from './shared/components';
 import { AuthGuardService } from './shared/services';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-
-import { DxDataGridModule, DxFormModule ,DxButtonModule ,DxToolbarModule, DxHtmlEditorModule, DxPopupModule, DxBoxModule, DxDateBoxModule, DxDropDownButtonModule,DxRangeSelectorModule , DxChartModule} from 'devextreme-angular';
+import { DxScrollViewModule } from 'devextreme-angular/ui/scroll-view';
+import { DxDataGridModule, DxFormModule ,DxButtonModule ,DxToolbarModule, DxHtmlEditorModule, DxPopupModule, DxBoxModule, DxDateBoxModule, DxDropDownButtonModule,DxRangeSelectorModule , DxChartModule, DxPieChartModule} from 'devextreme-angular';
 import { OrderBookComponent } from './pages/trading/order-book/order-book';
 
 import { OrderHistoryComponent } from './pages/trading/order-history/order-history';
@@ -71,7 +71,21 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), DxDataGridModule,DxRangeSelectorModule, DxFormModule,DxChartModule , DxButtonModule,CommonModule,DxPopupModule,DxToolbarModule, DxHtmlEditorModule,DxBoxModule, DxDropDownButtonModule, DxDateBoxModule],
+  imports: [
+    RouterModule.forRoot(routes),
+    DxDataGridModule,
+    DxRangeSelectorModule,
+    DxFormModule,DxChartModule,
+    DxButtonModule,
+    CommonModule,
+    DxPopupModule,
+    DxToolbarModule,
+    DxHtmlEditorModule,
+    DxBoxModule,
+    DxDropDownButtonModule,
+    DxDateBoxModule,
+    DxScrollViewModule,
+    DxPieChartModule ],
   providers: [AuthGuardService],
   exports: [RouterModule],
   declarations: [HomeComponent, OrderComponent, ProfileComponent, OrderBookComponent,PortfolioComponent, OrderHistoryComponent, TransactionHistoryComponent, SessionComponent,InstrumentSummaryComponent]

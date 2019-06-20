@@ -30,7 +30,7 @@
 .dx-card.wide-card {
   border-radius: 1;
   margin-left: 20;
-  margin-right: 50;
+  margin-right: 20;
   border-right: 1;
   border-left: 1;
 }
@@ -52,11 +52,14 @@ $side-panel-min-width: 60px;
   padding-left: 10px;
   font-weight: bold;
   font-size: 14px;
+ 
+}
+.white {
   color: white;
 }
 
 .toolbarBorder {
-  border-bottom: 1px solid ;
+  //border-bottom: 1px solid ;
   border-top: 1px solid ;
   height: 50px;
   padding:  5px 5px 5px 5px;
